@@ -1,0 +1,107 @@
+//====================================================================================================
+//====================================================================================================
+.footer {
+	background: #172432;
+	@include adaptiveValue("padding-top", 240, 80);	
+	@include adaptiveValue("padding-bottom", 140, 80);
+	// .footer__container
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		column-gap: rem(30);
+		@media (max-width: rem(1090)){
+			flex-direction: column;
+		}
+	}
+	// .footer__item-logo
+	&__item-logo {
+		@media (max-width: rem(1090)){
+			margin-bottom: rem(60);
+		}
+	}
+	// .footer__logo
+	&__logo {
+		max-width: rem(234);
+		img {
+			max-width: rem(234);
+		}
+	}
+	// .footer__info
+	&__info {
+		font-weight: 400;
+		font-size: rem(14);
+		line-height: 1.21; /* 17/14 */
+		margin-top: rem(16);
+	}
+	// .footer__item-content
+	&__item-content {
+		display: flex;
+		justify-content: space-between;
+		column-gap: rem(159);
+		@media (max-width: rem(1440)){
+			@include adaptiveValue("column-gap", 100, 20);
+		}
+		@media (max-width: rem(1152)){
+			column-gap: rem(40);
+		}
+		@media (max-width: rem(1090)){
+			max-width: 80%;
+		}
+		@media (max-width:$mobile){
+			max-width: 100%;
+		}
+		@media (max-width: rem(600)){
+			flex-direction: column;
+			row-gap: rem(60);
+		}
+	}
+	// .footer__column
+	&__column {
+	}
+	// .footer__title
+	&__title {
+		color: #fff;
+		font-weight: 500;
+		font-size: rem(24);
+		line-height: 1.16; /* 28/24 */
+		&:not(:last-child) {
+			margin-bottom: rem(18);
+		}
+	}
+	// .footer__item-social
+	&__item-social {
+		@media (max-width: rem(1090)){
+			margin-top: rem(60);
+		}
+	}
+}
+
+.menu-footer {
+	// .menu-footer__body
+	&__body {
+	}
+	// .menu-footer__list
+	&__list {
+	}
+	// .menu-footer__item
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: rem(12);
+		}
+	}
+	// .menu-footer__link
+	&__link {
+		line-height: 1.16; /* 21/18 */
+	}
+	// .menu-footer__social
+	&__social {
+		display: flex;
+		gap: rem(24);
+		padding: rem(4) 0;
+	}
+	// .menu-footer__icon
+	&__icon {
+		width: rem(32);
+		height: rem(32);
+	}
+}
