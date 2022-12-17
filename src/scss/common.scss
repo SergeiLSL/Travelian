@@ -3,10 +3,108 @@
 	font-size: rem(64);
 	line-height: 1.33; /* 85/64 */
 	color: #172432;
+	display: inline-flex;
+	position: relative;
+	&:not(:last-child) {
+		margin-bottom: rem(52);
+	}
+	&::after{
+		position: absolute;
+		content:'';
+		bottom: rem(-20);
+		left: 0;
+		width: 50%;
+		border: 2px solid #FF7757;
+	}
 }
 
 .text {
 	font-size: rem(24);
 	line-height: 1.16; /* 28/24 */
 	color: $mainColor;
+}
+
+//========================================================================================================================================================
+// ? Звездный рейтинг
+// .simple-rating {
+// 	position: relative;
+// 	font-size: 40px; /*можно изменять размер звездочек*/
+// 	display: inline-block;
+// 	&::before{
+// 		content: "★★★★★";
+// 		display: block;
+// 	}	
+// }
+
+.item-testimonial {
+	// .item-testimonial__rating
+	&__rating {
+	}
+}
+
+.rating.rating_sending {
+	opacity: 0.2;
+}
+.rating.rating_set .rating__active,
+.rating.rating_set .rating__item {
+	cursor: pointer;
+}
+
+.rating {
+	display: flex;
+	align-items: flex-end;
+	font-size: rem(29);
+	line-height: 0.75;
+	transition: opacity 0.3s ease 0s;
+	// .rating_set
+	&_set {		
+	}
+	// .rating__body
+	&__body {
+		position: relative;
+		&::before{
+			content: "★★★★★";
+			display: block;
+		}
+	}
+	// .rating__active
+	&__active {
+		position: absolute;
+		width: 0%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+		&::before{
+			content: "★★★★★";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			color: #ffd300;
+		}
+	}
+	// .rating__items
+	&__items {
+		display: flex;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+	// .rating__item
+	&__item {
+		flex: 0 0 20%;
+		height: 100%;
+		opacity: 0; /*убираем радиоточки*/
+	}
+	// .rating__value
+	&__value {
+		font-size: 50%;
+		line-height: 1;
+		padding: 0 0 0 rem(10);
+		display: none;
+	}
 }
