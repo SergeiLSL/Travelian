@@ -1,4 +1,7 @@
 .page {
+	// .page__destinations
+	&__destinations {
+	}
 	// .page__offer
 	&__offer {
 	}
@@ -11,6 +14,92 @@
 	// .page__experiences
 	&__experiences {
 	}
+}
+//========================================================================================================================================================
+// .page__destinations
+.destinations {
+	@include adaptiveValue("padding-top", 140, 80);
+	@include adaptiveValue("padding-bottom", 140, 80);
+	// .destinations__container
+	&__container {
+	}
+	// .destinations__inner
+	&__inner {
+	}
+	// .destinations__header
+	&__header {
+		&:not(:last-child) {
+			margin-bottom: rem(100);
+		}
+	}
+	// .destinations__title
+	&__title {
+	}
+	// .destinations__text
+	&__text {
+	}
+	// .destinations__slider
+	&__slider {
+	}
+	// .destinations__wrapper
+	&__wrapper {
+	}
+	// .destinations__slide
+	&__slide {
+		flex: 0 1 31.96%;
+	}
+	// .destinations__card
+	&__card {
+		position: relative;
+		border-radius: rem(26) rem(26) rem(26) rem(26);
+	}
+	// .destinations__image
+	&__image {
+		border-radius: rem(26);
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	// .destinations__block
+	&__block {
+		position: absolute;
+		left: 4.83%;
+		bottom: 8%;
+		color: #ffffff;
+
+	}
+	// .destinations__monument
+	&__monument {
+		font-size: rem(28);
+		line-height: 1.32; /* 37/28 */
+		&:not(:last-child) {
+			margin-bottom: rem(17);
+		}
+	}
+	&__location {
+		display: flex;
+	}
+	&__icon {
+		margin-right: rem(16);
+		width: rem(24);
+		height: rem(24);
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	// .destinations__city
+	&__city {
+		font-size: rem(24);
+		line-height: 1.16; /* 28/24 */
+	}
+}
+
+.swiper-button-left {
+}
+.swiper-button-right {
 }
 
 //====================================================================================================
@@ -57,12 +146,11 @@
 		img {
 			width: 100%;
 			height: 100%;
-			
 		}
 	}
 	// .offer__icontent
 	&__content {
-		background: #FFF8F1;
+		background: #fff8f1;
 		padding: rem(0) rem(24) rem(40) rem(24);
 		border-radius: 0 0 rem(26) rem(26);
 	}

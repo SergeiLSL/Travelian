@@ -27,15 +27,15 @@ import "../../scss/libs/swiper.scss";
 function initSliders() {
 	// Перечень слайдеров
 	// Проверяем, есть ли слайдер на стронице
-	if (document.querySelector('.gallery__slider')) { // Указываем скласс нужного слайдера
+	if (document.querySelector('.destinations__slider')) { // Указываем скласс нужного слайдера
 		// Создаем слайдер
-		new Swiper('.gallery__slider', { // Указываем скласс нужного слайдера
+		new Swiper('.destinations__slider', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
 			modules: [Navigation],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 4,
+			slidesPerView: 3.5,
 			spaceBetween: 32,
 			autoHeight: true,
 			speed: 800,
@@ -96,12 +96,12 @@ function initSliders() {
 					spaceBetween: 20,
 				},
 				992: {
-					slidesPerView: 4,
+					slidesPerView: 3.5,
 					spaceBetween: 20,
 				},
 				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
+					slidesPerView: 3.5,
+					spaceBetween: 32,
 				},
 			},
 			
