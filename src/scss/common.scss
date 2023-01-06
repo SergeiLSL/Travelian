@@ -1,6 +1,70 @@
 // Заголовки, общие БЄМ блоки и проче...
+.none {
+	display: none !important;
+}
+
+.offer__slider {
+	padding: rem(30) 0 rem(70) 0;
+}
+
+.offer__wrapper {
+	//padding: rem(30) 0 rem(70) 0;
+}
+
+.card-offer__image {
+	text-align: center;
+	img {
+		max-width: 100%;
+	}
+}
+
+.swiper-pagination {
+	bottom: 0;
+	&-bullet {
+		width: rem(20);
+		height: rem(20);
+		line-height: rem(20);
+		font-size: rem(14);
+		background-color: #ff7757;
+	}
+}
+
+/* ---------------------------- */
+.button {
+	display: inline-block;
+	color: #fff;
+	border-radius: 12px;
+	justify-content: center;
+	align-items: center;
+	padding: rem(20) rem(32);
+	@include adaptiveValue("padding-top", 20, 10);
+	@include adaptiveValue("padding-bottom", 20, 10);
+	@include adaptiveValue("padding-left", 32, 20);
+	@include adaptiveValue("padding-right", 32, 20);
+	font-size: rem(20);
+	line-height: 1.2; /* 24/20 */
+	transition: background-color 0.3s ease;
+	position: relative;
+	top: 0;
+	&:hover {
+		background-color: $colorPage;
+	}
+	&:active {
+		top: rem(3);
+		background-color: $colorPage;
+	}
+	@media (max-width: $mobile) {
+		font-size: rem(40);
+	}
+}
+
+.chacked {
+	background-color: $colorPage;
+}
+//========================================================================================================================================================
 .title {
-	font-size: rem(64);
+	//font-size: rem(64);
+	@include adaptiveValue("font-size", 64, 40);
 	line-height: 1.33; /* 85/64 */
 	color: #172432;
 	display: inline-flex;
@@ -8,18 +72,31 @@
 	&:not(:last-child) {
 		margin-bottom: rem(52);
 	}
-	&::after{
-		position: absolute;
-		content:'';
-		bottom: rem(-20);
-		left: 0;
-		width: 50%;
-		border: 2px solid #FF7757;
+	&_left {
+		&::after {
+			position: absolute;
+			content: "";
+			bottom: rem(-20);
+			left: 0;
+			width: 50%;
+			border: 2px solid #ff7757;
+		}
+	}
+	&_right {
+		&::after {
+			position: absolute;
+			content: "";
+			bottom: rem(-20);
+			right: 0;
+			width: 50%;
+			border: 2px solid #ff7757;
+		}
 	}
 }
 
 .text {
-	font-size: rem(24);
+	//font-size: rem(24);
+	@include adaptiveValue("font-size", 24, 18);
 	line-height: 1.16; /* 28/24 */
 	color: $mainColor;
 }
@@ -33,7 +110,7 @@
 // 	&::before{
 // 		content: "★★★★★";
 // 		display: block;
-// 	}	
+// 	}
 // }
 
 .item-testimonial {
@@ -57,12 +134,12 @@
 	line-height: 0.75;
 	transition: opacity 0.3s ease 0s;
 	// .rating_set
-	&_set {		
+	&_set {
 	}
 	// .rating__body
 	&__body {
 		position: relative;
-		&::before{
+		&::before {
 			content: "★★★★★";
 			display: block;
 		}
@@ -75,7 +152,7 @@
 		top: 0;
 		left: 0;
 		overflow: hidden;
-		&::before{
+		&::before {
 			content: "★★★★★";
 			position: absolute;
 			width: 100%;

@@ -9,10 +9,62 @@
 		@@include('html/_header.htm',{})
 		<main class="page">
 
-			<section class="page__first offer">
-				Для первого слайдера
-				https://www.youtube.com/watch?v=DEj6IvZLFUM
-				time 2:12:29
+			<section class="main-slider">
+				<!-- Оболочка слайдера -->
+				<div class="main-slider__slider swiper">
+					<!-- Двигающееся часть слайдера -->
+					<div class="main-slider__wrapper swiper-wrapper">
+						<!-- Слайд -->
+						<div class="main-slider__slide swiper-slide">
+							<div class="item-main-slider__content">
+								<div class="item-main-slider__container">
+									<div class="item-main-slider__text">
+										<h1 class="item-main-slider__title">
+											Start your unforgettable journey with us.
+										</h1>
+										<div class="item-main-slider__desc">
+											The best travel for your jouney begins now
+										</div>
+									</div>
+									<div class="item-main-slider__offer offer">
+									</div>
+								</div>
+							</div>
+							<div class="item-main-slider__bg-ibg">
+								<img src="@img/heroes/hero-section.jpg" alt="Hero Section">
+							</div>
+						</div>
+						<div class="main-slider__slide swiper-slide">
+							<div class="item-main-slider__content">
+								<div class="item-main-slider__container">
+									<div class="item-main-slider__text">
+										<h1 class="item-main-slider__title">
+											Finish your unforgettable journey with us.
+										</h1>
+										<div class="item-main-slider__desc">
+											The best travel for your jouney begins now
+										</div>
+									</div>
+									<div class="item-main-slider__offer offer">
+									</div>
+								</div>
+							</div>
+							<div class="item-main-slider__bg-ibg">
+								<img src="@img/heroes/hero-section.jpg" alt="Hero Section">
+							</div>
+						</div>
+					</div>
+
+					<!-- Если нужна навигация (влево/вправо) -->
+					<button type="button" class="swiper-button-prev">
+						<img src="@img/heroes/arrow-up.svg" alt="arrow-up">
+					</button>
+					<button type="button" class="swiper-button-next">
+						<img src="@img/heroes/arrow-down.svg" alt="arrow-down">
+					</button>
+					<!-- Если нужна пагинация -->
+					<div class="swiper-pagination"></div>
+				</div>
 			</section>
 
 			<section class="page__destinations destinations">
@@ -131,11 +183,21 @@
 				<div class="offer__container">
 					<div class="offer__inner">
 						<div class="offer__header">
-							<h2 class="offer__title title">
-								Special Offer
-							</h2>
-							<div class="offer__text text">
-								Check out our special offer and discounts
+							<div data-da=".offer__inner,767.98" class="offer__btn">
+								<button type="button" class="offer__button swiper-button-left">
+									<img src="@img/icons/slide-left.svg" alt="arrow">
+								</button>
+								<button type="button" class="offer__button swiper-button-right">
+									<img src="@img/icons/slide-right.svg" alt="arrow">
+								</button>
+							</div>
+							<div class="offer__block">
+								<h2 class="offer__title title title_right">
+									Special Offer
+								</h2>
+								<div class="offer__text text">
+									Check out our special offer and discounts
+								</div>
 							</div>
 						</div>
 						<!-- Оболочка слайдера -->
@@ -144,15 +206,15 @@
 							<div class="offer__wrapper swiper-wrapper">
 								<!-- Слайд -->
 								<div class="offer__slide swiper-slide">
-									<div class="offer__card">
-										<div class="offer__image">
+									<div class="offer__card card-offer">
+										<div class="card-offer__image">
 											<img src="@img/offer/01.jpg" alt="">
 										</div>
-										<div class="offer__content">
-											<div class="offer__city">
+										<div class="card-offer__content">
+											<div class="card-offer__city">
 												Lisbon, Portugal
 											</div>
-											<div class="offer__rating rating rating_set">
+											<div class="card-offer__rating rating rating_set">
 												<div class="rating__body">
 													<div class="rating__active"></div>
 													<div class="rating__items">
@@ -170,29 +232,29 @@
 												</div>
 												<div class="rating__value">2.9</div>
 											</div>
-											<div class="offer__desc">
+											<div class="card-offer__desc">
 												5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very
 												popular during the renaissance. Passage and going through the cites of
 												the
 												world in classical literature.
 											</div>
-											<div class="offer__footer">
-												<div class="offer__price">From <span>€500</span></div>
-												<a href="" class="button button">Details</a>
+											<div class="card-offer__footer">
+												<div class="card-offer__price">From <span>€500</span></div>
+												<a href="" class="card-offer__button button chacked">Details</a>
 											</div>
 										</div>
 									</div>
 								</div>
 								<div class="offer__slide swiper-slide">
-									<div class="offer__card">
-										<div class="offer__image">
+									<div class="offer__card card-offer">
+										<div class="card-offer__image">
 											<img src="@img/offer/02.jpg" alt="">
 										</div>
-										<div class="offer__content">
-											<div class="offer__city">
+										<div class="card-offer__content">
+											<div class="card-offer__city">
 												Athens, Greece
 											</div>
-											<div class="offer__rating rating rating_set">
+											<div class="card-offer__rating rating rating_set">
 												<div class="rating__body">
 													<div class="rating__active"></div>
 													<div class="rating__items">
@@ -208,32 +270,31 @@
 															name="rating">
 													</div>
 												</div>
-												<div class="rating__value">2.9</div>
+												<div class="rating__value">4.9</div>
 											</div>
-											<div class="offer__desc">
+											<div class="card-offer__desc">
 												5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very
-												popular
-												during the renaissance. Passage and going through the cites of the world
-												in
-												classical literature.
+												popular during the renaissance. Passage and going through the cites of
+												the
+												world in classical literature.
 											</div>
-											<div class="offer__footer">
-												<div class="offer__price">From <span>€800</span></div>
-												<a href="" class="button button">Details</a>
+											<div class="card-offer__footer">
+												<div class="card-offer__price">From <span>€800</span></div>
+												<a href="" class="card-offer__button button chacked">Details</a>
 											</div>
 										</div>
 									</div>
 								</div>
 								<div class="offer__slide swiper-slide">
-									<div class="offer__card">
-										<div class="offer__image">
+									<div class="offer__card card-offer">
+										<div class="card-offer__image">
 											<img src="@img/offer/03.jpg" alt="">
 										</div>
-										<div class="offer__content">
-											<div class="offer__city">
+										<div class="card-offer__content">
+											<div class="card-offer__city">
 												Rome, Italy
 											</div>
-											<div class="offer__rating rating rating_set">
+											<div class="card-offer__rating rating rating_set">
 												<div class="rating__body">
 													<div class="rating__active"></div>
 													<div class="rating__items">
@@ -249,280 +310,400 @@
 															name="rating">
 													</div>
 												</div>
-												<div class="rating__value">3.9</div>
+												<div class="rating__value">3.2</div>
 											</div>
-											<div class="offer__desc">
+											<div class="card-offer__desc">
 												5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very
-												popular
-												during the renaissance. Passage and going through the cites of the world
-												in
-												classical literature.
+												popular during the renaissance. Passage and going through the cites of
+												the
+												world in classical literature.
 											</div>
-											<div class="offer__footer">
-												<div class="offer__price">From <span>€750</span></div>
-												<a href="" class="button button">Details</a>
+											<div class="card-offer__footer">
+												<div class="card-offer__price">From<span>€750</span></div>
+												<a href="" class="card-offer__button button chacked">Details</a>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 							<!-- Если нужна навигация (влево/вправо) -->
-							<button type="button" class="offer__button swiper-button-left">
+							<!-- <button type="button" class="offer__button swiper-button-left">
 								<img src="@img/icons/slide-left.svg" alt="arrow">
 							</button>
 							<button type="button" class="offer__button swiper-button-right">
 								<img src="@img/icons/slide-right.svg" alt="arrow">
-							</button>
+							</button> -->
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section class="page__blog blog">
-				<div class="blog__container">
-					<div class="blog__inner">
-						<div class="blog__header">
-							<h2 class="blog__title title">
-								Our Blog
+			<!-- <section class="page__offer offer">
+				<div class="offer__container">
+					<div class="offer__inner">
+						<div class="offer__header">
+							<h2 class="offer__title title">
+								Special Offer
 							</h2>
-							<div class="blog__text text">
-								An insight the incredible experience in the world
-							</div>
-						</div>
-						<div class="blog__content">
-							<div class="blog__image">
-								<img src="@img/blog/lighthouse.jpg" alt="Lighthouse">
-							</div>
-							<div class="blog__body">
-								<div class="blog__subtitle">
-									Beautiful Italy Let’s travel
-								</div>
-								<div class="blog__desc">
-									But I must explain to you how all this mistaken idea of denouncing pleasure and
-									praising pain was born and I will give you a complete account of the system and
-									expound the actual teachings of the great explorer of the truth, the master- builder
-									of human happiness. No one rejects, dislike, or avoids plasure itself, because it is
-									pleasure, but because those who do not know how to pursue pleasure rationally
-									encounter consequences that are extremly painful. Nor again is there anyone who
-									loves or pursues.
-								</div>
-								<a class="blog__read" href="#">Read More
-									<img src="@img/icons/arrow-right.svg" alt="">
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<!--? Не могу вынести кнопки за пределы слайдера -->
-			<section class="page__gallery gallery">
-				<div class="gallery__container">
-					<div class="gallery__inner">
-						<div class="gallery__header">
-							<h2 class="gallery__title title">
-								Destination Galleryr
-							</h2>
-							<div class="gallery__text text">
-								Our photo gallery on trip
+							<div class="offer__text text">
+								Check out our special offer and discounts
 							</div>
 						</div>
 						<!-- Оболочка слайдера -->
-						<div class="gallery__slider swiper">
-							<!-- Двигающееся часть слайдера -->
-							<div class="gallery__wrapper swiper-wrapper">
-								<!-- Слайд -->
-								<div class="gallery__slide swiper-slide">
-									<div class="gallery__image">
-										<img src="@img/gallery/01.jpg" alt="Картинка">
-									</div>
+			<div class="offer__slider swiper">
+				<!-- Двигающееся часть слайдера -->
+				<div class="offer__wrapper swiper-wrapper">
+					<!-- Слайд -->
+					<div class="offer__slide swiper-slide">
+						<div class="offer__card">
+							<div class="offer__image">
+								<img src="@img/offer/01.jpg" alt="">
+							</div>
+							<div class="offer__content">
+								<div class="offer__city">
+									Lisbon, Portugal
 								</div>
-								<div class="gallery__slide swiper-slide">
-									<div class="gallery__image">
-										<img src="@img/gallery/02.jpg" alt="Картинка">
+								<div class="offer__rating rating rating_set">
+									<div class="rating__body">
+										<div class="rating__active"></div>
+										<div class="rating__items">
+											<input type="radio" class="rating__item" value="1" name="rating">
+											<input type="radio" class="rating__item" value="2" name="rating">
+											<input type="radio" class="rating__item" value="3" name="rating">
+											<input type="radio" class="rating__item" value="4" name="rating">
+											<input type="radio" class="rating__item" value="5" name="rating">
+										</div>
 									</div>
+									<div class="rating__value">2.9</div>
 								</div>
-								<div class="gallery__slide swiper-slide">
-									<div class="gallery__image">
-										<img src="@img/gallery/03.jpg" alt="Картинка">
-									</div>
+								<div class="offer__desc">
+									5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very
+									popular during the renaissance. Passage and going through the cites of
+									the
+									world in classical literature.
 								</div>
-								<div class="gallery__slide swiper-slide">
-									<div class="gallery__image">
-										<img src="@img/gallery/04.jpg" alt="Картинка">
-									</div>
-								</div>
-								<div class="gallery__slide swiper-slide">
-									<div class="gallery__image">
-										<img src="@img/gallery/05.jpg" alt="Картинка">
-									</div>
+								<div class="offer__footer">
+									<div class="offer__price">From <span>€500</span></div>
+									<a href="" class="button button">Details</a>
 								</div>
 							</div>
-							<!-- Если нужна навигация (влево/вправо) -->
-							<button type="button" class="gallery__button swiper-button-left">
-								<img src="@img/icons/slide-left.svg" alt="arrow">
-							</button>
-							<button type="button" class="gallery__button swiper-button-right">
-								<img src="@img/icons/slide-right.svg" alt="arrow">
-							</button>
+						</div>
+					</div>
+					<div class="offer__slide swiper-slide">
+						<div class="offer__card">
+							<div class="offer__image">
+								<img src="@img/offer/02.jpg" alt="">
+							</div>
+							<div class="offer__content">
+								<div class="offer__city">
+									Athens, Greece
+								</div>
+								<div class="offer__rating rating rating_set">
+									<div class="rating__body">
+										<div class="rating__active"></div>
+										<div class="rating__items">
+											<input type="radio" class="rating__item" value="1" name="rating">
+											<input type="radio" class="rating__item" value="2" name="rating">
+											<input type="radio" class="rating__item" value="3" name="rating">
+											<input type="radio" class="rating__item" value="4" name="rating">
+											<input type="radio" class="rating__item" value="5" name="rating">
+										</div>
+									</div>
+									<div class="rating__value">2.9</div>
+								</div>
+								<div class="offer__desc">
+									5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very
+									popular
+									during the renaissance. Passage and going through the cites of the world
+									in
+									classical literature.
+								</div>
+								<div class="offer__footer">
+									<div class="offer__price">From <span>€800</span></div>
+									<a href="" class="button button">Details</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="offer__slide swiper-slide">
+						<div class="offer__card">
+							<div class="offer__image">
+								<img src="@img/offer/03.jpg" alt="">
+							</div>
+							<div class="offer__content">
+								<div class="offer__city">
+									Rome, Italy
+								</div>
+								<div class="offer__rating rating rating_set">
+									<div class="rating__body">
+										<div class="rating__active"></div>
+										<div class="rating__items">
+											<input type="radio" class="rating__item" value="1" name="rating">
+											<input type="radio" class="rating__item" value="2" name="rating">
+											<input type="radio" class="rating__item" value="3" name="rating">
+											<input type="radio" class="rating__item" value="4" name="rating">
+											<input type="radio" class="rating__item" value="5" name="rating">
+										</div>
+									</div>
+									<div class="rating__value">3.9</div>
+								</div>
+								<div class="offer__desc">
+									5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very
+									popular
+									during the renaissance. Passage and going through the cites of the world
+									in
+									classical literature.
+								</div>
+								<div class="offer__footer">
+									<div class="offer__price">From <span>€750</span></div>
+									<a href="" class="button button">Details</a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-			</section>
+				<!-- Если нужна навигация (влево/вправо) -->
+				<button type="button" class="offer__button swiper-button-left">
+					<img src="@img/icons/slide-left.svg" alt="arrow">
+				</button>
+				<button type="button" class="offer__button swiper-button-right">
+					<img src="@img/icons/slide-right.svg" alt="arrow">
+				</button>
+			</div>
+	</div>
+	</div>
+	</section> -->
 
-			<!-- ? Как вывести слайдер за пределы контейнера -->
-			<section class="page__experiences experiences">
-				<div class="experiences__container">
-					<div class="experiences__inner">
-						<div class="experiences__header">
-							<h2 class="experiences__title title">
-								Traveler’s Experiences
-							</h2>
-							<div class="experiences__text text">
-								Here some awesome feedback from our travelers
-							</div>
-						</div>
-						<!-- Оболочка слайдера -->
-						<div class="experiences__slider swiper">
-							<!-- Двигающееся часть слайдера -->
-							<div class="experiences__wrapper swiper-wrapper">
-								<!-- Слайд -->
-								<div class="experiences__slide swiper-slide">
-									<div class="experiences__card-review card-review">
-										<div class="card-review__image">
-											<img src="@img/experiences/avatar-01.jpg" alt="Avatar">
-										</div>
-										<div class="card-review__content">
-											<div class="card-review__desc">
-												But I must explain to you how all this mistaken idea of denouncing
-												pleasure and praising pain was born and I will give you a complete
-												account of the system and expound the actual teachings of the great
-												explorer of the truth, the master- builder of human happiness.
-											</div>
-											<!-- <div class="card-review__rating">
-												<img src="@img/experiences/rating.svg" alt="">
-											</div> -->
-											<div class="card-review__rating rating rating_set">
-												<div class="rating__body">
-													<div class="rating__active"></div>
-													<div class="rating__items">
-														<input type="radio" class="rating__item" value="1"
-															name="rating">
-														<input type="radio" class="rating__item" value="2"
-															name="rating">
-														<input type="radio" class="rating__item" value="3"
-															name="rating">
-														<input type="radio" class="rating__item" value="4"
-															name="rating">
-														<input type="radio" class="rating__item" value="5"
-															name="rating">
-													</div>
-												</div>
-												<div class="rating__value">1.7</div>
-											</div>
-
-											<div class="card-review__name">John Doe</div>
-											<div class="card-review__status">Accountant</div>
-										</div>
-									</div>
-								</div>
-								<div class="experiences__slide swiper-slide">
-									<div class="experiences__card-review card-review">
-										<div class="card-review__image">
-											<img src="@img/experiences/avatar-02.jpg" alt="Avatar">
-										</div>
-										<div class="card-review__content">
-											<div class="card-review__desc">
-												But I must explain to you how all this mistaken idea of denouncing
-												pleasure
-												and praising pain was born and I will give you a complete account of the
-												system and expound the actual teachings of the great explorer of the
-												truth,
-												the master- builder of human happiness.
-											</div>
-											<!-- <div class="card-review__rating">
-												<img src="@img/experiences/rating.svg" alt="">
-											</div> -->
-											<div class="card-review__rating rating rating_set">
-												<div class="rating__body">
-													<div class="rating__active"></div>
-													<div class="rating__items">
-														<input type="radio" class="rating__item" value="1"
-															name="rating">
-														<input type="radio" class="rating__item" value="2"
-															name="rating">
-														<input type="radio" class="rating__item" value="3"
-															name="rating">
-														<input type="radio" class="rating__item" value="4"
-															name="rating">
-														<input type="radio" class="rating__item" value="5"
-															name="rating">
-													</div>
-												</div>
-												<div class="rating__value">2.9</div>
-											</div>
-
-											<div class="card-review__name">John Smith</div>
-											<div class="card-review__status">Journalist, HWO News</div>
-										</div>
-									</div>
-								</div>
-								<div class="experiences__slide swiper-slide">
-									<div class="experiences__card-review card-review">
-										<div class="card-review__image">
-											<img src="@img/experiences/avatar-03.jpg" alt="Avatar">
-										</div>
-										<div class="card-review__content">
-											<div class="card-review__desc">
-												But I must explain to you how all this mistaken idea of denouncing
-												pleasure
-												and praising pain was born and I will give you a complete account of the
-												system and expound the actual teachings of the great explorer of the
-												truth,
-												the master- builder of human happiness.
-											</div>
-											<!-- <div class="card-review__rating">
-												<img src="@img/experiences/rating.svg" alt="">
-											</div> -->
-											<div class="card-review__rating rating rating_set">
-												<div class="rating__body">
-													<div class="rating__active"></div>
-													<div class="rating__items">
-														<input type="radio" class="rating__item" value="1"
-															name="rating">
-														<input type="radio" class="rating__item" value="2"
-															name="rating">
-														<input type="radio" class="rating__item" value="3"
-															name="rating">
-														<input type="radio" class="rating__item" value="4"
-															name="rating">
-														<input type="radio" class="rating__item" value="5"
-															name="rating">
-													</div>
-												</div>
-												<div class="rating__value">3.7</div>
-											</div>
-
-											<div class="card-review__name">Tamara Bellis</div>
-											<div class="card-review__status">Managing Director, JTH</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- Если нужна навигация (влево/вправо) -->
-							<button type="button" class="experiences__button swiper-button-left">
-								<img src="@img/icons/slide-left.svg" alt="arrow">
-							</button>
-							<button type="button" class="experiences__button swiper-button-right">
-								<img src="@img/icons/slide-right.svg" alt="arrow">
-							</button>
-						</div>
+	<section class="page__blog blog">
+		<div class="blog__container">
+			<div class="blog__inner">
+				<div class="blog__header">
+					<h2 class="blog__title title">
+						Our Blog
+					</h2>
+					<div class="blog__text text">
+						An insight the incredible experience in the world
 					</div>
 				</div>
-			</section>
+				<div class="blog__content">
+					<div class="blog__image">
+						<img src="@img/blog/lighthouse.jpg" alt="Lighthouse">
+					</div>
+					<div class="blog__body">
+						<div class="blog__subtitle">
+							Beautiful Italy Let’s travel
+						</div>
+						<div class="blog__desc">
+							But I must explain to you how all this mistaken idea of denouncing pleasure and
+							praising pain was born and I will give you a complete account of the system and
+							expound the actual teachings of the great explorer of the truth, the master- builder
+							of human happiness. No one rejects, dislike, or avoids plasure itself, because it is
+							pleasure, but because those who do not know how to pursue pleasure rationally
+							encounter consequences that are extremly painful. Nor again is there anyone who
+							loves or pursues.
+						</div>
+						<a class="blog__read" href="#">Read More
+							<img src="@img/icons/arrow-right.svg" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-		</main>
-		@@include('html/_footer.htm',{})
+	<!--? Не могу вынести кнопки за пределы слайдера -->
+	<section class="page__gallery gallery">
+		<div class="gallery__container">
+			<div class="gallery__inner">
+				<div class="gallery__header">
+					<h2 class="gallery__title title">
+						Destination Galleryr
+					</h2>
+					<div class="gallery__text text">
+						Our photo gallery on trip
+					</div>
+				</div>
+				<!-- Оболочка слайдера -->
+				<div class="gallery__slider swiper">
+					<!-- Двигающееся часть слайдера -->
+					<div class="gallery__wrapper swiper-wrapper">
+						<!-- Слайд -->
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="@img/gallery/01.jpg" alt="Картинка">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="@img/gallery/02.jpg" alt="Картинка">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="@img/gallery/03.jpg" alt="Картинка">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="@img/gallery/04.jpg" alt="Картинка">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="@img/gallery/05.jpg" alt="Картинка">
+							</div>
+						</div>
+					</div>
+					<!-- Если нужна навигация (влево/вправо) -->
+					<button type="button" class="gallery__button swiper-button-left">
+						<img src="@img/icons/slide-left.svg" alt="arrow">
+					</button>
+					<button type="button" class="gallery__button swiper-button-right">
+						<img src="@img/icons/slide-right.svg" alt="arrow">
+					</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ? Как вывести слайдер за пределы контейнера -->
+	<section class="page__experiences experiences">
+		<div class="experiences__container">
+			<div class="experiences__inner">
+				<div class="experiences__header">
+					<h2 class="experiences__title title">
+						Traveler’s Experiences
+					</h2>
+					<div class="experiences__text text">
+						Here some awesome feedback from our travelers
+					</div>
+				</div>
+				<!-- Оболочка слайдера -->
+				<div class="experiences__slider swiper">
+					<!-- Двигающееся часть слайдера -->
+					<div class="experiences__wrapper swiper-wrapper">
+						<!-- Слайд -->
+						<div class="experiences__slide swiper-slide">
+							<div class="experiences__card-review card-review">
+								<div class="card-review__image">
+									<img src="@img/experiences/avatar-01.jpg" alt="Avatar">
+								</div>
+								<div class="card-review__content">
+									<div class="card-review__desc">
+										But I must explain to you how all this mistaken idea of denouncing
+										pleasure and praising pain was born and I will give you a complete
+										account of the system and expound the actual teachings of the great
+										explorer of the truth, the master- builder of human happiness.
+									</div>
+									<!-- <div class="card-review__rating">
+												<img src="@img/experiences/rating.svg" alt="">
+											</div> -->
+									<div class="card-review__rating rating rating_set">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input type="radio" class="rating__item" value="1" name="rating">
+												<input type="radio" class="rating__item" value="2" name="rating">
+												<input type="radio" class="rating__item" value="3" name="rating">
+												<input type="radio" class="rating__item" value="4" name="rating">
+												<input type="radio" class="rating__item" value="5" name="rating">
+											</div>
+										</div>
+										<div class="rating__value">1.7</div>
+									</div>
+
+									<div class="card-review__name">John Doe</div>
+									<div class="card-review__status">Accountant</div>
+								</div>
+							</div>
+						</div>
+						<div class="experiences__slide swiper-slide">
+							<div class="experiences__card-review card-review">
+								<div class="card-review__image">
+									<img src="@img/experiences/avatar-02.jpg" alt="Avatar">
+								</div>
+								<div class="card-review__content">
+									<div class="card-review__desc">
+										But I must explain to you how all this mistaken idea of denouncing
+										pleasure
+										and praising pain was born and I will give you a complete account of the
+										system and expound the actual teachings of the great explorer of the
+										truth,
+										the master- builder of human happiness.
+									</div>
+									<!-- <div class="card-review__rating">
+												<img src="@img/experiences/rating.svg" alt="">
+											</div> -->
+									<div class="card-review__rating rating rating_set">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input type="radio" class="rating__item" value="1" name="rating">
+												<input type="radio" class="rating__item" value="2" name="rating">
+												<input type="radio" class="rating__item" value="3" name="rating">
+												<input type="radio" class="rating__item" value="4" name="rating">
+												<input type="radio" class="rating__item" value="5" name="rating">
+											</div>
+										</div>
+										<div class="rating__value">2.9</div>
+									</div>
+
+									<div class="card-review__name">John Smith</div>
+									<div class="card-review__status">Journalist, HWO News</div>
+								</div>
+							</div>
+						</div>
+						<div class="experiences__slide swiper-slide">
+							<div class="experiences__card-review card-review">
+								<div class="card-review__image">
+									<img src="@img/experiences/avatar-03.jpg" alt="Avatar">
+								</div>
+								<div class="card-review__content">
+									<div class="card-review__desc">
+										But I must explain to you how all this mistaken idea of denouncing
+										pleasure
+										and praising pain was born and I will give you a complete account of the
+										system and expound the actual teachings of the great explorer of the
+										truth,
+										the master- builder of human happiness.
+									</div>
+									<!-- <div class="card-review__rating">
+												<img src="@img/experiences/rating.svg" alt="">
+											</div> -->
+									<div class="card-review__rating rating rating_set">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input type="radio" class="rating__item" value="1" name="rating">
+												<input type="radio" class="rating__item" value="2" name="rating">
+												<input type="radio" class="rating__item" value="3" name="rating">
+												<input type="radio" class="rating__item" value="4" name="rating">
+												<input type="radio" class="rating__item" value="5" name="rating">
+											</div>
+										</div>
+										<div class="rating__value">3.7</div>
+									</div>
+
+									<div class="card-review__name">Tamara Bellis</div>
+									<div class="card-review__status">Managing Director, JTH</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Если нужна навигация (влево/вправо) -->
+					<button type="button" class="experiences__button swiper-button-left">
+						<img src="@img/icons/slide-left.svg" alt="arrow">
+					</button>
+					<button type="button" class="experiences__button swiper-button-right">
+						<img src="@img/icons/slide-right.svg" alt="arrow">
+					</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	</main>
+	@@include('html/_footer.htm',{})
 	</div>
 	@@include('html/_popup.htm',{})
 	@@include('html/_js.htm',{})

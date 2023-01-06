@@ -54,6 +54,9 @@
 		&:hover {
 			border-bottom: 3px solid #FF7757;
 		}
+		&.active {
+			border-bottom: 3px solid #FF7757;
+		}
 	}
 	// .menu__links
 	&__links {
