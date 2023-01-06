@@ -70,12 +70,23 @@
 			<section class="page__destinations destinations">
 				<div class="destinations__container">
 					<div class="destinations__inner">
+
 						<div class="destinations__header">
-							<h2 class="destinations__title title">
-								Popular Destinations
-							</h2>
-							<div class="destinations__text text">
-								Most popular destinations around the world, from historical places to natural wonders.
+							<div class="destinations__box">
+								<h2 class="destinations__title title title_left">
+									Popular Destinations
+								</h2>
+								<div class="destinations__text text">
+									Most popular destinations around the world, from historical places to natural wonders.
+								</div>
+							</div>
+							<div data-da=".destinations__inner,767.98" class="destinations__btn">
+								<button type="button" class="destinations__button swiper-button-left">
+									<img src="@img/icons/slide-left.svg" alt="arrow">
+								</button>
+								<button type="button" class="destinations__button swiper-button-right">
+									<img src="@img/icons/slide-right.svg" alt="arrow">
+								</button>
 							</div>
 						</div>
 						<!-- Оболочка слайдера -->
@@ -166,18 +177,13 @@
 										</div>
 									</div>
 								</div>
+								
 							</div>
-							<!-- Если нужна навигация (влево/вправо) -->
-							<button type="button" class="offer__button swiper-button-left">
-								<img src="@img/icons/slide-left.svg" alt="arrow">
-							</button>
-							<button type="button" class="offer__button swiper-button-right">
-								<img src="@img/icons/slide-right.svg" alt="arrow">
-							</button>
+							<div class="destinations__pagination swiper-pagination"></div>
 						</div>
 					</div>
 				</div>
-			</section>
+			</section>	
 
 			<section class="page__offer offer">
 				<div class="offer__container">
@@ -704,7 +710,7 @@
 
 						<div class="experiences__footer">
 							<div class="experiences__content">
-								<div data-da=".experiences__inner,767.98" class="experiences__btn">
+								<div class="experiences__btn">
 									<button type="button" class="experiences__button swiper-button-left">
 										<img src="@img/icons/slide-left.svg" alt="arrow">
 									</button>
@@ -731,7 +737,6 @@
 										</div>
 									</div>
 								</form>
-								<!-- </div> -->
 							</div>
 						</div>
 					</div>
