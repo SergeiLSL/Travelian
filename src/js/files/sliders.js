@@ -150,18 +150,18 @@ import "../../scss/libs/swiper.scss";
 
 //========================================================================================================================================================
 //========================================================================================================================================================
-// ! Инициализация слайдерa offer__slider
+// ! Инициализация слайдерa experiences__slider
 function initSliders() {
 	// Перечень слайдеров
 	// Проверяем, есть ли слайдер на странице
-	if (document.querySelector('.offer__slider')) { // Указываем скласс нужного слайдера
+	if (document.querySelector('.experiences__slider')) { // Указываем скласс нужного слайдера
 		// Создаем слайдер
-		new Swiper('.offer__slider', { // Указываем скласс нужного слайдера
+		new Swiper('.experiences__slider', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
 			modules: [Navigation],
 			//direction: 'vertical',
-			slidesPerView: 3,
+			slidesPerView: 2.25,
 			spaceBetween: 32,
 			autoHeight: true,
 			speed: 800,
@@ -186,12 +186,12 @@ function initSliders() {
 					autoHeight: true,
 				},
 				768: {
-					slidesPerView: 2,
+					slidesPerView: 1.5,
 					spaceBetween: 20,
 					autoHeight: true,
 				},
 				1152: {
-					slidesPerView: 3,
+					slidesPerView: 2.1,
 					spaceBetween: 32,
 					autoHeight: true,
 				},
@@ -209,4 +209,67 @@ window.addEventListener("load", function (e) {
 	// Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
 	//initSlidersScroll();
 });
+
+//========================================================================================================================================================
+
+//========================================================================================================================================================
+// ! Инициализация слайдерa offer__slider
+// function initSliders() {
+// 	// Перечень слайдеров
+// 	// Проверяем, есть ли слайдер на странице
+// 	if (document.querySelector('.offer__slider')) { // Указываем скласс нужного слайдера
+// 		// Создаем слайдер
+// 		new Swiper('.offer__slider', { // Указываем скласс нужного слайдера
+// 			// Подключаем модули слайдера
+// 			// для конкретного случая
+// 			modules: [Navigation],
+// 			//direction: 'vertical',
+// 			slidesPerView: 3,
+// 			spaceBetween: 32,
+// 			autoHeight: true,
+// 			speed: 800,
+// 			loop: true,
+// 			grabCursor: true,
+// 			// Кнопки "влево/вправо"
+// 			navigation: {
+// 				prevEl: '.swiper-button-left',
+// 				nextEl: '.swiper-button-right'
+// 			},
+
+// 			// Брейкпоинты
+// 			breakpoints: {
+// 				320: {
+// 					slidesPerView: 1,
+// 					spaceBetween: 5,
+// 					autoHeight: true,
+// 				},
+// 				530: {
+// 					slidesPerView: 1,
+// 					spaceBetween: 10,
+// 					autoHeight: true,
+// 				},
+// 				768: {
+// 					slidesPerView: 2,
+// 					spaceBetween: 20,
+// 					autoHeight: true,
+// 				},
+// 				1152: {
+// 					slidesPerView: 3,
+// 					spaceBetween: 32,
+// 					autoHeight: true,
+// 				},
+// 			},
+// 			// События
+// 			on: {
+// 			}
+// 		});
+// 	}
+// }
+
+// window.addEventListener("load", function (e) {
+// 	// Запуск инициализации слайдеров
+// 	initSliders();
+// 	// Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
+// 	//initSlidersScroll();
+// });
 //========================================================================================================================================================
