@@ -279,6 +279,72 @@ window.addEventListener("load", function (e) {
 	//initSlidersScroll();
 });
 //========================================================================================================================================================
+// ! Инициализация слайдерa Planners__slider
+function initSlidersPlanners() {
+	// Перечень слайдеров
+	// Проверяем, есть ли слайдер на странице
+	if (document.querySelector('.advertising__slider')) { // Указываем скласс нужного слайдера
+		// Создаем слайдер
+		new Swiper('.advertising__slider', { // Указываем скласс нужного слайдера
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation, Autoplay],
+			//direction: 'vertical',
+			slidesPerView: 4,
+			spaceBetween: 32,
+			autoHeight: true,
+			speed: 800,
+			loop: true,
+			grabCursor: true,
+			// Кнопки "влево/вправо"
+			// navigation: {
+			// 	prevEl: '.destinations-button-left',
+			// 	nextEl: '.destinations-button-right'
+			// },
+
+			// Брейкпоинты
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 5,
+					autoHeight: true,
+				},
+				530: {
+					slidesPerView: 1,
+					spaceBetween: 10,
+					autoHeight: true,
+				},
+				768: {
+					slidesPerView: 2.2,
+					spaceBetween: 20,
+					autoHeight: true,
+				},
+				1152: {
+					slidesPerView: 2.7,
+					spaceBetween: 32,
+					autoHeight: true,
+				},
+				1440: {
+					slidesPerView: 3.5,
+					spaceBetween: 32,
+					autoHeight: true,
+				},
+			},
+			// События
+			on: {
+			}
+		});
+	}
+}
+
+window.addEventListener("load", function (e) {
+	// Запуск инициализации слайдеров
+	initSlidersPlanners();
+	// Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
+	//initSlidersScroll();
+});
+
+//========================================================================================================================================================
 // ! Инициализация слайдерa gallery__slider
 function initSlidersGallery() {
 	// Перечень слайдеров
