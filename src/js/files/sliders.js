@@ -215,6 +215,141 @@ window.addEventListener("load", function (e) {
 });
 
 //========================================================================================================================================================
+
+//========================================================================================================================================================
+
+//========================================================================================================================================================
+// ! Инициализация слайдерa offer__slider
+function initSlidersOffer() {
+	// Перечень слайдеров
+	// Проверяем, есть ли слайдер на странице
+	if (document.querySelector('.offer__slider')) { // Указываем скласс нужного слайдера
+		// Создаем слайдер
+		new Swiper('.offer__slider', { // Указываем скласс нужного слайдера
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation],
+			//direction: 'vertical',
+			slidesPerView: 3,
+			spaceBetween: 32,
+			autoHeight: true,
+			speed: 800,
+			loop: true,
+			grabCursor: true,
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.offer-button-left',
+				nextEl: '.offer-button-right'
+			},
+
+			// Брейкпоинты
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 5,
+					autoHeight: true,
+				},
+				530: {
+					slidesPerView: 1,
+					spaceBetween: 10,
+					autoHeight: true,
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+					autoHeight: true,
+				},
+				1152: {
+					slidesPerView: 3,
+					spaceBetween: 32,
+					autoHeight: true,
+				},
+			},
+			// События
+			on: {
+			}
+		});
+	}
+}
+
+window.addEventListener("load", function (e) {
+	// Запуск инициализации слайдеров
+	initSlidersOffer();
+	// Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
+	//initSlidersScroll();
+});
+//========================================================================================================================================================
+// ! Инициализация слайдерa gallery__slider
+function initSlidersGallery() {
+	// Перечень слайдеров
+	// Проверяем, есть ли слайдер на странице
+	if (document.querySelector('.gallery__slider')) { // Указываем скласс нужного слайдера
+		// Создаем слайдер
+		new Swiper('.gallery__slider', { // Указываем скласс нужного слайдера
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation],
+			//direction: 'vertical',
+			slidesPerView: 3,
+			spaceBetween: 32,
+			autoHeight: true,
+			speed: 800,
+			loop: true,
+			grabCursor: true,
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.gallery-button-left',
+				nextEl: '.gallery-button-right'
+			},
+
+			// Брейкпоинты
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 5,
+					autoHeight: true,
+				},
+				530: {
+					slidesPerView: 1,
+					spaceBetween: 10,
+					autoHeight: true,
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+					autoHeight: true,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+					autoHeight: true,
+				},
+				1200: {
+					slidesPerView: 4,
+					spaceBetween: 32,
+					autoHeight: true,
+				},
+				1440: {
+					// slidesPerView: 4,
+					// spaceBetween: 32,
+					// autoHeight: true,
+				},
+			},
+			// События
+			on: {
+			}
+		});
+	}
+}
+
+window.addEventListener("load", function (e) {
+	// Запуск инициализации слайдеров
+	initSlidersGallery();
+	// Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
+	//initSlidersScroll();
+});
+
+//========================================================================================================================================================
 // ! Инициализация слайдерa experiences__slider
 function initSlidersExperiences() {
 	// Перечень слайдеров
@@ -280,66 +415,4 @@ window.addEventListener("load", function (e) {
 	//initSlidersScroll();
 });
 
-//========================================================================================================================================================
-
-//========================================================================================================================================================
-// ! Инициализация слайдерa offer__slider
-function initSlidersOffer() {
-	// Перечень слайдеров
-	// Проверяем, есть ли слайдер на странице
-	if (document.querySelector('.offer__slider')) { // Указываем скласс нужного слайдера
-		// Создаем слайдер
-		new Swiper('.offer__slider', { // Указываем скласс нужного слайдера
-			// Подключаем модули слайдера
-			// для конкретного случая
-			modules: [Navigation],
-			//direction: 'vertical',
-			slidesPerView: 3,
-			spaceBetween: 32,
-			autoHeight: true,
-			speed: 800,
-			loop: true,
-			grabCursor: true,
-			// Кнопки "влево/вправо"
-			navigation: {
-				prevEl: '.offer-button-left',
-				nextEl: '.offer-button-right'
-			},
-
-			// Брейкпоинты
-			breakpoints: {
-				320: {
-					slidesPerView: 1,
-					spaceBetween: 5,
-					autoHeight: true,
-				},
-				530: {
-					slidesPerView: 1,
-					spaceBetween: 10,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-					autoHeight: true,
-				},
-				1152: {
-					slidesPerView: 3,
-					spaceBetween: 32,
-					autoHeight: true,
-				},
-			},
-			// События
-			on: {
-			}
-		});
-	}
-}
-
-window.addEventListener("load", function (e) {
-	// Запуск инициализации слайдеров
-	initSlidersOffer();
-	// Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
-	//initSlidersScroll();
-});
 //========================================================================================================================================================

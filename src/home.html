@@ -375,16 +375,26 @@
 				</div>
 			</section>
 
-			<!--? Не могу вынести кнопки за пределы слайдера -->
 			<section class="page__gallery gallery">
 				<div class="gallery__container">
 					<div class="gallery__inner">
+
 						<div class="gallery__header">
-							<h2 class="gallery__title title">
-								Destination Galleryr
-							</h2>
-							<div class="gallery__text text">
-								Our photo gallery on trip
+							<div class="gallery__box">
+								<h2 class="gallery__title title title_left">
+									Destination Galleryr
+								</h2>
+								<div class="gallery__text text">
+									Our photo gallery on trip
+								</div>
+							</div>
+							<div data-da=".gallery__inner,767.98" class="gallery__btn">
+								<button type="button" class="gallery__button gallery-button-left">
+									<img src="@img/icons/slide-left.svg" alt="arrow">
+								</button>
+								<button type="button" class="gallery__button gallery-button-right">
+									<img src="@img/icons/slide-right.svg" alt="arrow">
+								</button>
 							</div>
 						</div>
 						<!-- Оболочка слайдера -->
@@ -393,42 +403,45 @@
 							<div class="gallery__wrapper swiper-wrapper">
 								<!-- Слайд -->
 								<div class="gallery__slide swiper-slide">
-									<div class="gallery__image">
-										<img src="@img/gallery/01.jpg" alt="Картинка">
+									<div class="gallery__card">
+										<div class="gallery__image">
+											<img src="@img/gallery/01.jpg" alt="Картинка">
+										</div>
 									</div>
 								</div>
 								<div class="gallery__slide swiper-slide">
-									<div class="gallery__image">
-										<img src="@img/gallery/02.jpg" alt="Картинка">
+									<div class="gallery__card">
+										<div class="gallery__image">
+											<img src="@img/gallery/02.jpg" alt="Картинка">
+										</div>
 									</div>
 								</div>
 								<div class="gallery__slide swiper-slide">
-									<div class="gallery__image">
-										<img src="@img/gallery/03.jpg" alt="Картинка">
+									<div class="gallery__card">
+										<div class="gallery__image">
+											<img src="@img/gallery/03.jpg" alt="Картинка">
+										</div>
 									</div>
 								</div>
 								<div class="gallery__slide swiper-slide">
-									<div class="gallery__image">
-										<img src="@img/gallery/04.jpg" alt="Картинка">
+									<div class="gallery__card">
+										<div class="gallery__image">
+											<img src="@img/gallery/04.jpg" alt="Картинка">
+										</div>
 									</div>
 								</div>
 								<div class="gallery__slide swiper-slide">
-									<div class="gallery__image">
-										<img src="@img/gallery/05.jpg" alt="Картинка">
+									<div class="gallery__card">
+										<div class="gallery__image">
+											<img src="@img/gallery/02.jpg" alt="Картинка">
+										</div>
 									</div>
 								</div>
 							</div>
-							<!-- Если нужна навигация (влево/вправо) -->
-							<button type="button" class="gallery__button swiper-button-left">
-								<img src="@img/icons/slide-left.svg" alt="arrow">
-							</button>
-							<button type="button" class="gallery__button swiper-button-right">
-								<img src="@img/icons/slide-right.svg" alt="arrow">
-							</button>
 						</div>
 					</div>
 				</div>
-			</section>
+			</section>	
 
 			<!-- ? Как вывести слайдер за пределы контейнера -->
 			<section class="page__experiences experiences">
